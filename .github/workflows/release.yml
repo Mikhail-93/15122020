@@ -6,8 +6,8 @@ on:
            - master
 
 jobs:
-    release:
-        name: publish
+    test:
+        name: test
         runs-on: ubuntu-latest
         steps:
               - uses: actions/checkout@v2
