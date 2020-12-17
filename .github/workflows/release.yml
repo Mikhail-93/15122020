@@ -16,5 +16,4 @@ jobs:
                   node-version: 14.6.0
                   registry-url: https://registry.npmjs.org
               - run: npm i
-              - run: npm run build && npm run package
               - run: npm test
