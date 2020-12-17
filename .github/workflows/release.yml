@@ -17,5 +17,6 @@ jobs:
                   registry-url: https://registry.npmjs.org
               - run: npm install -g typescript
               - run: npm i -D ts-jest
+              - run: npm install typescript --save
               - run: npm i
               - run: npm test
