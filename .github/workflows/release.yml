@@ -16,5 +16,6 @@ jobs:
                   node-version: 14.6.0
                   registry-url: https://registry.npmjs.org
               - run: npm install -g typescript
+              - run: npm i -D ts-jest
               - run: npm i
               - run: npm test
