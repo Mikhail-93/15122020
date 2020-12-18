@@ -26,6 +26,7 @@ jobs:
               - run: npm install typescript --save
               - run: npm i
               - run: npm install -g npm@7.3.0
+              - run: npm install @types/js-base64 --save-dev
               - run: docker-compose up -d
               - run: sleep 60
               - run: npm test
