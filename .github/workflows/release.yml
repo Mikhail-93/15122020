@@ -1,5 +1,11 @@
 name: "release"
-
+env:
+    APP_PORT : "8030"
+    DB_USER: "admin"
+    DB_PASSWORD: "password"
+    DB_DB: "db1"
+    NODE_ENV: "test"
+    DB_PORT: 5432
 on:
     push:
         branches:
