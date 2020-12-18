@@ -28,7 +28,7 @@ jobs:
               - run: npm install -g npm@7.3.0
               - run: npm install @types/js-base64 --save-dev
               - run: docker-compose up -d
-              - run: docker exec db psql -U postgres -c "GRANT USAGE ON SCHEMA public TO <non-admin-user>;"
-              - run: docker exec db psql -U postgres -c "GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO <non-admin-user>;"
+              - run: docker exec db psql -U admin -c "GRANT USAGE ON SCHEMA public TO <non-admin-user>;"
+              - run: docker exec db psql -U admin -c "GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO <non-admin-user>;"
               - run: sleep 60
               - run: npm test
