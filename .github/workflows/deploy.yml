@@ -24,4 +24,4 @@ jobs:
           pass: ${{ secrets.DC_PASS }}
           script: |-
             ls -la
-            pwd
+            mkdir -p /home/ec2-user/test
