@@ -1,11 +1,18 @@
-name: "release"
+name: "test"
 env:
-    APP_PORT : "8030"
-    DB_USER: "admin"
-    DB_PASSWORD: "password"
-    DB_DB: "users"
-    NODE_ENV: "test"
-    DB_PORT: 5432
+    APP_PORT : ${{ secrets.APP_PORT }}
+    DB_USER: ${{ secrets.DB_USER }}
+    DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+    DB_DB: ${{ secrets.DB_DB }}
+    NODE_ENV: ${{ secrets.NODE_ENV }}
+    DB_PORT: ${{ secrets.DB_PORT }}
+    DB_HOST: ${{ secrets.DB_HOST }}
+    VK_CLIENT_ID: ${{ secrets.VK_CLIENT_ID }}
+    VK_CLIENT_SECRET: ${{ secrets.VK_CLIENT_SECRET }}
+    VK_SVETOSLAV_TOKEN: ${{ secrets.VK_SVETOSLAV_TOKEN }}
+    VK_SVETOSLAV_ID: ${{ secrets.VK_SVETOSLAV_ID }}
+    VK_TEST_USER: ${{ secrets.VK_TEST_USER }}
+    
 on:
     push:
         branches:
