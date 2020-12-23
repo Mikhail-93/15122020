@@ -31,13 +31,4 @@ jobs:
               - run: docker exec db psql -U admin -c "GRANT USAGE ON SCHEMA public TO <non-admin-user>;"
               - run: docker exec db psql -U admin -c "GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO <non-admin-user>;"
               - run: sleep 60
-#              - run: npm test
-    deploy:
-        name: deploy
-               - uses: cross-the-world/ssh-pipeline@master
-                 with:
-                   host: ${{ secrets.DC_HOST }}
-                   user: ${{ secrets.DC_USER }}
-                   pass: ${{ secrets.DC_PASS }}
-                   connect_timeout: 10s
-                   script: ls -la  
+              - run: npm test
