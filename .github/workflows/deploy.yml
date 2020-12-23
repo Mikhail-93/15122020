@@ -12,4 +12,4 @@ jobs:
         host: ${{ secrets.DC_HOST }}
         username: ${{ secrets.DC_USER }}
         password: ${{ secrets.DC_PASS }}
-        script: cd ~/www-docker/kopnik-node/ && git pull && docker-compose down && docker-compose up -d
+        script: cd ~/www-docker/kopnik-node/ && git pull && docker-compose down && npm i && docker-compose up -d
