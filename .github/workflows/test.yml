@@ -1,17 +1,17 @@
 name: "test"
 env:
-    APP_PORT : ${{ secrets.APP_PORT }}
-    DB_USER: ${{ secrets.DB_USER }}
-    DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-    DB_DB: ${{ secrets.DB_DB }}
-    NODE_ENV: ${{ secrets.NODE_ENV }}
-    DB_PORT: ${{ secrets.DB_PORT }}
-    DB_HOST: ${{ secrets.DB_HOST }}
-    VK_CLIENT_ID: ${{ secrets.VK_CLIENT_ID }}
+    APP_PORT : 8082
+    DB_USER: db_user
+    DB_PASSWORD: db_password
+    DB_DB: db_name
+    NODE_ENV: test
+    DB_PORT: 5432
+    DB_HOST: localhost
+    VK_CLIENT_ID: 7210289
     VK_CLIENT_SECRET: ${{ secrets.VK_CLIENT_SECRET }}
     VK_SVETOSLAV_TOKEN: ${{ secrets.VK_SVETOSLAV_TOKEN }}
-    VK_SVETOSLAV_ID: ${{ secrets.VK_SVETOSLAV_ID }}
-    VK_TEST_USER: ${{ secrets.VK_TEST_USER }}
+    VK_SVETOSLAV_ID: 7210289
+    VK_TEST_USER: 261824271
     
 on:
     push:
