@@ -1,0 +1,25 @@
+name: ssh-pipeline
+on:
+  push:
+    branches:
+      - master
+
+env:
+  DIR1: "/home/github/test/test1"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+
+      - name: ssh pipeline
+        uses: cross-the-world/ssh-pipeline@master
+        with:
+          host: ${{ secrets.DC_HOST }}
+          user: ${{ secrets.DC_USER }}
+          pass: ${{ secrets.DC_PASS }}
+          script: ls -la
