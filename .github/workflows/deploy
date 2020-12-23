@@ -22,4 +22,6 @@ jobs:
           host: ${{ secrets.DC_HOST }}
           user: ${{ secrets.DC_USER }}
           pass: ${{ secrets.DC_PASS }}
-          script: ls -la
+          script: |-
+            ls -la
+            pwd
