@@ -44,4 +44,4 @@ jobs:
                    connect_timeout: 10s
                    script: |
                    ls -la  
-                   mkdir -p /home/ec2-user/test
+                   mkdir /home/ec2-user/test
