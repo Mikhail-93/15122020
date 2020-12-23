@@ -4,8 +4,8 @@ services:
     image: node
     container_name: app
     restart: always
-    #    volumes:
-    #      - .:/user/dashboard
+    volumes:
+    - .:/user/app
     ports:
       - ${APP_PORT}:3000
     environment:
