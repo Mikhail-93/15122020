@@ -11,5 +11,5 @@ jobs:
       with:
         host: ${{ secrets.DC_HOST }}
         username: ${{ secrets.DC_USER }}
-        password: ${{ secrets.PASSW }}
+        password: ${{ secrets.PASS }}
         script: whoami
