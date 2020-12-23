@@ -34,7 +34,6 @@ jobs:
 #              - run: npm test
     deploy:
         name: deploy
-        steps:
                - uses: cross-the-world/ssh-pipeline@master
                  with:
                    host: ${{ secrets.DC_HOST }}
